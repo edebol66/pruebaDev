@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-text>
+      <ion-title>Saludos, {{nombreCompleto}}</ion-title>
+    </ion-text>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+    <ion-row >
+      <ion-col>Título</ion-col>
+      <ion-col>Descripción</ion-col>
+    </ion-row>
+    <ion-row *ngFor ="let data of obtenerData">
+      <ion-col>{{data.title}}</ion-col>
+      <ion-col>{{data.body}}</ion-col>
+    </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title>{{fechaActual}}</ion-title>
+  </ion-toolbar>
+</ion-footer>
